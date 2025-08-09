@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './welcome.css';
 
-const Welcome: React.FC = () => {
+const Welcome = () => {
     return (
         <div className="welcome-container">
             <h1>خوش آمدید به صفحه عضویت</h1>

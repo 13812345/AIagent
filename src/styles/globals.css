@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazir&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Vazir', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
@@ -13,12 +15,11 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
-    color: #2c3e50;
 }
 
 a {
     text-decoration: none;
-    color: #3498db;
+    color: #007bff;
 }
 
 a:hover {
@@ -26,28 +27,26 @@ a:hover {
 }
 
 .container {
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.button {
+.btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #3498db;
-    color: white;
     border: none;
     border-radius: 5px;
+    background-color: #007bff;
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.button:hover {
-    background-color: #2980b9;
+.btn:hover {
+    background-color: #0056b3;
 }
 
-.input-field {
+input, textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -55,22 +54,17 @@ a:hover {
     border-radius: 5px;
 }
 
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
 .error {
     color: red;
-    font-size: 0.9rem;
+    margin-top: 10px;
 }
 
 .success {
     color: green;
-    font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-
-    .button {
-        width: 100%;
-    }
+    margin-top: 10px;
 }

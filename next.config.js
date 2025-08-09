@@ -1,14 +1,11 @@
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
   images: {
     domains: ['example.com'], // Add your image domains here
   },
   env: {
-    API_URL: process.env.API_URL, // Add your environment variables here
-  },
-  webpack: (config) => {
-    // Custom webpack configuration can go here
-    return config;
+    CUSTOM_ENV_VARIABLE: process.env.CUSTOM_ENV_VARIABLE, // Add your custom environment variables here
   },
 };
 

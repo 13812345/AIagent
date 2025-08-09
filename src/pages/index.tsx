@@ -1,24 +1,19 @@
 import React, { useState } from 'react';
 
 const SignupPage = () => {
-  const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    if (password !== confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
+    // Handle signup logic here
+    console.log('Signup successful:', { email, password });
   };
 
   return (
@@ -26,24 +21,12 @@ const SignupPage = () => {
       <h1>صفحه عضویت</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="username">نام کاربری:</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
           <label htmlFor="email">ایمیل:</label>
           <input
             type="email"
             id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
@@ -52,12 +35,22 @@ const SignupPage = () => {
           <input
             type="password"
             id="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
         </div>
+        <div>
+          <label htmlFor="confirmPassword">تأیید رمز عبور:</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+          />
+        </div>
+        {error && <p className="error">{error}</p>}
         <button type="submit">ثبت نام</button>
       </form>
     </div>
