@@ -2,10 +2,10 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['example.com'], // Replace with your image domains
+    domains: ['example.com'], // Add your image domains here
   },
   env: {
-    CUSTOM_ENV_VARIABLE: process.env.CUSTOM_ENV_VARIABLE, // Example of using environment variables
+    CUSTOM_ENV_VARIABLE: process.env.CUSTOM_ENV_VARIABLE, // Add any custom environment variables
   },
 };
 

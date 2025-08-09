@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 
 const SignupPage = () => {
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (password !== confirmPassword) {
-      setError('Passwords do not match');
+    if (!username || !email || !password) {
+      setError('All fields are required');
       return;
     }
-    // Handle signup logic here
-    console.log('Signup successful:', { email, password });
+    // Add your signup logic here
+    console.log('User signed up:', { username, email, password });
+    setError('');
   };
 
   return (
@@ -21,33 +22,27 @@ const SignupPage = () => {
       <h1>صفحه عضویت</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="email">ایمیل:</label>
+          <label>نام کاربری:</label>
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>ایمیل:</label>
           <input
             type="email"
-            id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
           />
         </div>
         <div>
-          <label htmlFor="password">رمز عبور:</label>
+          <label>رمز عبور:</label>
           <input
             type="password"
-            id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="confirmPassword">تأیید رمز عبور:</label>
-          <input
-            type="password"
-            id="confirmPassword"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
           />
         </div>
         {error && <p style={{ color: 'red' }}>{error}</p>}

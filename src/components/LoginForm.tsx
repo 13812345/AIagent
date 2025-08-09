@@ -38,7 +38,7 @@ const LoginForm = () => {
                     required
                 />
             </div>
-            {error && <div style={{ color: 'red' }}>{error}</div>}
+            {error && <p style={{ color: 'red' }}>{error}</p>}
             <button type="submit">ورود</button>
         </form>
     );
