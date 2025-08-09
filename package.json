@@ -1,0 +1,45 @@
+{
+  "name": "طراحی-یه-صفحه-عضویت",
+  "version": "1.0.0",
+  "description": "پروژه طراحی صفحه عضویت با استفاده از React",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [
+    "React",
+    "عضویت",
+    "فرم"
+  ],
+  "author": "نام شما",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "axios": "^0.21.1",
+    "formik": "^2.2.6",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "jest": "^26.6.0",
+    "react-testing-library": "^11.2.7",
+    "eslint": "^7.14.0",
+    "eslint-plugin-react": "^7.27.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
