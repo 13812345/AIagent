@@ -13,7 +13,7 @@ const SignupPage = () => {
       return;
     }
     // Handle signup logic here
-    console.log('Signup successful:', { email, password });
+    console.log('Signing up with:', { email, password });
   };
 
   return (

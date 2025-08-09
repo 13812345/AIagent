@@ -9,15 +9,13 @@ class User(BaseModel):
     email: str
     password: str
 
-@app.post("/register", response_model=User)
+@app.post("/register/")
 async def register_user(user: User):
-    # Here you would typically hash the password and save the user to the database
-    return user
+    return {"message": "User registered successfully", "user": user}
 
-@app.get("/users", response_model=List[User])
+@app.get("/users/", response_model=List[User])
 async def get_users():
-    # This is a placeholder for getting users from the database
-    return []  # Return an empty list for now
+    return []  # Placeholder for user list, implement actual logic as needed
 
 if __name__ == "__main__":
     import uvicorn

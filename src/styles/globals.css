@@ -1,17 +1,7 @@
-:root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --font-family: 'Arial', sans-serif;
-    --font-size: 16px;
-    --line-height: 1.5;
-}
-
 body {
     margin: 0;
     padding: 0;
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    line-height: var(--line-height);
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -19,12 +9,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
-    color: var(--primary-color);
 }
 
 a {
-    color: var(--primary-color);
     text-decoration: none;
+    color: #007bff;
 }
 
 a:hover {
@@ -38,19 +27,23 @@ a:hover {
 }
 
 .button {
-    background-color: var(--secondary-color);
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 20px;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .button:hover {
-    background-color: darken(var(--secondary-color), 10%);
+    background-color: #0056b3;
 }
 
-input, textarea {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -58,8 +51,11 @@ input, textarea {
     border-radius: 5px;
 }
 
-input:focus, textarea:focus {
-    border-color: var(--primary-color);
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #007bff;
     outline: none;
 }
 
