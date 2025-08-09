@@ -5,7 +5,6 @@ class User(models.Model):
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=128)
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.username
@@ -25,4 +24,4 @@ class Subscription(models.Model):
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
-        return f"{self.user.username} - {'Active' if self.is_active else 'Inactive'}"
+        return f"Subscription for {self.user.username} - Active: {self.is_active}"

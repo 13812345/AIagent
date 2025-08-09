@@ -1,16 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './welcome.css';
 
 const WelcomePage = () => {
     return (
-        <div className="welcome-container">
+        <div style={{ textAlign: 'center', padding: '50px' }}>
             <h1>خوش آمدید!</h1>
-            <p>ما خوشحالیم که شما را در اینجا می‌بینیم. لطفاً برای ادامه، وارد حساب کاربری خود شوید یا ثبت‌نام کنید.</p>
-            <div className="button-container">
-                <Link to="/login" className="btn">ورود</Link>
-                <Link to="/signup" className="btn">ثبت‌نام</Link>
-            </div>
+            <p>ما خوشحالیم که شما را در اینجا می‌بینیم. لطفاً برای ادامه به صفحه عضویت بروید.</p>
+            <Link to="/signup" style={{ textDecoration: 'none', color: 'blue', fontSize: '20px' }}>
+                به صفحه عضویت بروید
+            </Link>
         </div>
     );
 };

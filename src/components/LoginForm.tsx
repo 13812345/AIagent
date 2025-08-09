@@ -5,7 +5,7 @@ const LoginForm = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         if (!email || !password) {
             setError('لطفا همه فیلدها را پر کنید');
@@ -38,7 +38,7 @@ const LoginForm = () => {
                     required
                 />
             </div>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
+            {error && <div style={{ color: 'red' }}>{error}</div>}
             <button type="submit">ورود</button>
         </form>
     );
