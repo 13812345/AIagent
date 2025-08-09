@@ -11,7 +11,7 @@ const LoginForm = () => {
             setError('لطفا همه فیلدها را پر کنید');
             return;
         }
-        // Here you would typically handle the login logic
+        // Add your login logic here
         console.log('Logging in with:', { email, password });
         setError('');
     };

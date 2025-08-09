@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './welcome.css';
 
-const Welcome = () => {
+const WelcomePage = () => {
     return (
         <div className="welcome-container">
-            <h1>خوش آمدید به صفحه عضویت</h1>
-            <p>برای ادامه، لطفاً اطلاعات خود را وارد کنید.</p>
+            <h1>خوش آمدید!</h1>
+            <p>ما خوشحالیم که شما را در اینجا می‌بینیم. لطفاً برای ادامه به صفحه عضویت بروید.</p>
             <Link to="/signup" className="signup-link">به صفحه عضویت بروید</Link>
         </div>
     );
 };
 
-export default Welcome;
+export default WelcomePage;

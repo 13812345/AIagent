@@ -1,25 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Vazir&display=swap');
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --font-family: 'Arial', sans-serif;
+    --font-size: 16px;
+    --line-height: 1.5;
 }
 
 body {
-    font-family: 'Vazir', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
     background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1rem;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color);
 }
 
 a {
+    color: var(--primary-color);
     text-decoration: none;
-    color: #007bff;
 }
 
 a:hover {
@@ -32,18 +37,17 @@ a:hover {
     padding: 20px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
+.button {
+    background-color: var(--secondary-color);
     color: white;
+    border: none;
+    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+.button:hover {
+    background-color: darken(var(--secondary-color), 10%);
 }
 
 input, textarea {
@@ -55,16 +59,16 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-    border-color: #007bff;
+    border-color: var(--primary-color);
     outline: none;
 }
 
 .error {
     color: red;
-    margin-top: 10px;
+    font-size: 0.9em;
 }
 
 .success {
     color: green;
-    margin-top: 10px;
+    font-size: 0.9em;
 }

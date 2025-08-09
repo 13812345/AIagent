@@ -17,7 +17,7 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="signup-container">
+    <div>
       <h1>صفحه عضویت</h1>
       <form onSubmit={handleSubmit}>
         <div>
@@ -50,7 +50,7 @@ const SignupPage = () => {
             required
           />
         </div>
-        {error && <p className="error">{error}</p>}
+        {error && <p style={{ color: 'red' }}>{error}</p>}
         <button type="submit">ثبت نام</button>
       </form>
     </div>
